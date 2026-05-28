@@ -1,3 +1,12 @@
+# [1.64.0](https://github.com/anurag3407/career-pilot/compare/v1.63.0...v1.64.0) (2026-05-28)
+
+
+### Features
+
+* Added the Gradient Mesh Art Portfolio Template ([046fa8b](https://github.com/anurag3407/career-pilot/commit/046fa8bd8db102b2a33e1e1c7cffdba27dba4056))
+* changes in the gradient-mesh-art portfolio template ([60455d7](https://github.com/anurag3407/career-pilot/commit/60455d798c3a548b659b5075d1034788822e4373))
+* changes made in the gradient-mesh-art portfolio portfolio ([e788c13](https://github.com/anurag3407/career-pilot/commit/e788c13384dc1abb1a1f057a7d1e6e0e1413c5db))
+
 # [1.63.0](https://github.com/anurag3407/career-pilot/compare/v1.62.1...v1.63.0) (2026-05-28)
 
 
