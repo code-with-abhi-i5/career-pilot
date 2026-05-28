@@ -65,6 +65,7 @@ import PortfolioHub from './pages/hubs/PortfolioHub';
 import CareerGrowthHub from './pages/hubs/CareerGrowthHub';
 import CommunityHub from './pages/hubs/CommunityHub';
 const GitHubDashboard = lazy(() => import('./pages/GitHubDashboard'));
+const RepoAnalyzer = lazy(() => import('./pages/RepoAnalyzer'));
 import ScrollToTop from "./components/ScrollToTop";
 import RainforestCanopy from './components/portfolio/templates/Rainforest_Canopy/index.jsx';
 import TestSocialLinks from './pages/TestSocialLinks';
@@ -251,6 +252,17 @@ main
     <ProtectedRoute>
       <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading GitHub Dashboard...</div>}>
         <GitHubDashboard />
+      </Suspense>
+    </ProtectedRoute>
+  } 
+/>
+
+        <Route 
+  path="/repo-analyzer" 
+  element={
+    <ProtectedRoute>
+      <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading Analyzer...</div>}>
+        <RepoAnalyzer />
       </Suspense>
     </ProtectedRoute>
   } 
