@@ -138,55 +138,26 @@ const isValidGithub = (username) => {
 };
 
   const saveEdit = async () => {
-const saveEdit = async () => {
-  const githubUsername = getGithubUsername(form.github)
+    const githubUsername = getGithubUsername(form.github)
 
-  if (!isValidWebsite(form.website.trim())) {
-    toast.error("Please enter a valid website URL")
-    return
-  }
+    if (!isValidWebsite(form.website.trim())) {
+      toast.error("Please enter a valid website URL")
+      return
+    }
 
-  if (!isValidLinkedIn(form.linkedin.trim())) {
-    toast.error("Please enter a valid LinkedIn profile URL")
-    return
-  }
+    if (!isValidLinkedIn(form.linkedin.trim())) {
+      toast.error("Please enter a valid LinkedIn profile URL")
+      return
+    }
 
-  if (!isValidGithub(githubUsername)) {
-    toast.error("Invalid GitHub username")
-    return
-  }
+    if (!isValidGithub(githubUsername)) {
+      toast.error("Invalid GitHub username")
+      return
+    }
 
-  setSaving(true)
+    setSaving(true)
 
-  try {
-    const res = await userProfileApi.updateMyProfile({
-      displayName: form.displayName.trim(),
-      bio: form.bio.trim(),
-      jobRole: form.jobRole.trim(),
-      skills: form.skills.split(',').map(s => s.trim()).filter(Boolean),
-      location: form.location.trim(),
-      website: form.website.trim(),
-      github: githubUsername,
-      linkedin: form.linkedin.trim(),
-    })
-  if (!isValidWebsite(form.website.trim())) {
-    toast.error("Please enter a valid website URL");
-    return;
-  }
-
-  if (!isValidLinkedIn(form.linkedin.trim())) {
-    toast.error("Please enter a valid LinkedIn profile URL");
-    return;
-  }
-
-  if (!isValidGithub(form.github.trim())) {
-    toast.error("Invalid GitHub username");
-    return;
-  }
-
-  setSaving(true);
-
-  try {
+    try {
       const res = await userProfileApi.updateMyProfile({
         displayName: form.displayName.trim(),
         bio: form.bio.trim(),
